@@ -1,0 +1,68 @@
+Advance Javascript
+callback,promise,fetch,async and await..
+Small Application..
+
+Callback?
+diff between sync vs async..
+Synchronous/Sequential:
+Step By Step
+
+Asynchronous->Parallel -> TimeConsuming Operation
+InBuilt Async Function
+setTimeout(()=>{},time in milliseconds)
+Settimeout is an Inbuilt Async Function
+it has 2 parameters
+1.A Function
+2. milliseconds
+This function is used to perform certain task such
+that after a couple of minutes it has to be displayed..
+
+call stack,web api,callbackqueue
+
+
+Call Stack:
+it is called as Ledger,,
+it is used to keep the track of the functions that are to be executed..
+// Time consuming Operations..
+console.log("App is starting!!!");
+setTimeout(()=>console.log("Hello world!!"),3000)
+console.log("App is deployed...")
+setTimeout(()=>console.log("App is under testing!!!"),2000)
+var sayhello = () =>{
+    sayHi()
+    console.log("Say Hello!!");
+}
+var sayHi = () =>{
+    console.log("Say Bye!!!")
+}
+
+sayhello()
+
+Web API:
+it is the place where the actual Time Consuming Operations are executed!!!!
+
+
+Event Queue:
+It  the place where the async code waits for the execution!!!!
+it is executed in the order as they placed in the event queue
+
+
+Event Loop:
+It is in between call stack and call back queue..
+the main purpose is to check whether the call stack is empty 
+or not
+if it is empty, then the functions from the event queue will  be  pushed to
+call stack  for the execution
+
+
+console.log("App is under development")
+setTimeout(function bar() {
+    console.log("App is under staging");
+}, 5000);
+setTimeout(function foo() {
+console.log('App is under construction!!');    
+}, 2000);
+console.log("App is under testing!");
+
+
+console.log("App is under production!!!");
