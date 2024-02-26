@@ -1,6 +1,7 @@
 .View{
-    font-size: 200%;
     color:white;
+    text-align: center;
+    font-size:xx-large;
 }
 body{
     background-color: grey;
